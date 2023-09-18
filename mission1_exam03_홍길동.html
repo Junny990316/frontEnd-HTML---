@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #gender {
+            margin: 20px 0 20px 0;
+        }
+        #email {
+            margin-bottom: 10px;
+        }
+        #cards {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <title>Payment Form</title>
+    <fieldset>
+        <h1>Payment Form</h1>
+        <hr>
+        <span>Required fields are followed by *</span>
+        <div id="ContactInfo">
+            <h2>Contact Information</h2>
+            <form>
+                Name: * <input type="text" name="name" id="name" autofocus required
+                placeholder="smith">
+            </form>
+            <fieldset id="gender">
+                <legend>Gender * </legend>
+                <form method="get">
+                    Male<input type="radio" name="gender" value="male"> 
+                    Female<input type="radio" name="gender" value="male">
+                    other<input type="radio" name="gender" value="male"> 
+                </form>
+            </fieldset>
+            Address: <br>
+            <textarea name="" id="" cols="85" rows="10" placeholder="Enter the address"></textarea>
+            <form>
+                Email: * <input type="email" name="email" id="email" autofocus required placeholder="smith@gmail.com"><br>
+                Pincode: * <input type="number" name="Pincode" id="pincode" autofocus required placeholder="123456">
+            </form>
+        </div>
+        <hr>
+        <div id="PaymentInfo">
+            <h2>Payment Information</h2>
+            <form>
+                Card Type: * 
+                <select name="cards" id="cards" required>
+                    <option value="">--Select a Card Type--</option>
+                    <option value="Rupay">Rupay</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Visa">Visa</option>
+                </select>
+                <br>
+                Card number: * 
+                <input type="number" name="cardNum" id="cards" autofocus required placeholder="1111-2222-3333-4444">
+                <br>
+                Expiration Date: *
+                <label for="date"></label>
+                <input type="date" name="date" id="cards">
+                <br>
+                CVV: *
+                <input type="number" required>
+            </form>
+            <br>
+            <button>Pay Now</button>
+        </div>
+    </fieldset>
+    
+  </head>
+  <body></body>
+</html>
