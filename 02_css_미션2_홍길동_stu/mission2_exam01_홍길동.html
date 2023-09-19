@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        margin: 0 0 0 0;
+      }
+      img{
+        position: absolute;
+        z-index: -1;
+      }
+      h1 {
+        color: white;
+        line-height: 2;
+        word-spacing: 10px;
+      }
+      button {
+        background-color: #9dd84d;
+        border-style: none;
+        color: white;
+        height: 30px;
+        font-size: 13px;
+        border-radius: 5px;
+      }
+      input {
+        border-style: groove;
+        height: 20px;
+        width: 180px;
+      }
+      input:focus {
+        outline: none !important; 
+        border-color: #d6a8e9; 
+        box-shadow: 0 0 10px #d6a8e9;
+      }
+      .login {
+        margin: 40px 55px 0 0;
+        float: right;
+      }
+    </style>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <img src="../02_css_미션2_홍길동_stu/main.jpg">
+    <div class="login">
+      <h1>LG Mall에 오신 것을 환영합니다. <br>로그인하여 인증해주세요.</h1>
+      <form id="loginForm" action="" method="post">
+        <input type="text" id="id" name="id" placeholder="아이디" />
+        <input type="password" id="password" name="password" placeholder="패스워드"/>
+        <button>로그인</button>
+        <button>회원가입</button>
+      </form>
+    </div>
+  </body>
+</html>

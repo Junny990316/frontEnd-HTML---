@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      select {
+        width: 100px;
+        height: 30px;
+        margin-left: 20px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+      }
+      button {
+        width: 100px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        border-style: none;
+        text-align: center;
+      }
+      input {
+        height: 25px;
+        margin-left: 20px;
+      }
+      td {
+        padding-bottom: 10px;
+      }
+      table {
+        margin-left: 60px;
+      }
+      .buttonDiv {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btn{
+        background-color: #9dd84d;
+        border-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signUp">
+      <h1>회원 가입</h1>
+      <form action="signUp" method="POST">
+        <hr />
+        <table>
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" id="id" /></td>
+            <td><button>중복확인</button></td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="password" id="password" /></td>
+          </tr>
+          <tr>
+            <td>비밀번호확인</td>
+            <td><input type="password" id="password" /></td>
+          </tr>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" id="name" /></td>
+          </tr>
+          <tr>
+            <td rowspan="3">주소</td>
+            <td><input type="text" id="address" placeholder="우편번호" /></td>
+            <td><button>우편번호검색</button></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="address1" placeholder="주소" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="address1" placeholder="상세주소" /></td>
+          </tr>
+          <tr>
+            <td>전화번호</td>
+            <td>
+              <select id="phone">
+                <option value="010">010</option>
+                <option value="011">011</option>
+              </select>
+            <td><input type="number" /></td>
+            <td><input type="number" /></td>
+            </td>
+            
+          </tr>
+          <tr>
+            <td>이메일</td>
+            <td><input type="text" /> @</td>
+            <td><input type="text" /></td>
+            <td>
+              <select id="email">
+                <option value="email">이메일선택</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <div class="buttonDiv">
+          <button class="btn" type="submit">회원가입</button>
+          <button class="btn" type="reset">지우기</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

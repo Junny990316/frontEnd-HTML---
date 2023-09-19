@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        display: flex;
+        margin: 0 0;
+        flex-direction: column;
+        background-color: black;
+      }
+
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #404040;
+        color: white;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        position: relative;
+        margin-top: 80px;
+        text-decoration: none;
+        justify-content: space-between;
+        padding: 5px;
+      }
+
+      nav a {
+        width: 18%;
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+        background-color: darkgray;
+        color: black;
+      }
+
+      article {
+        position: relative;
+      }
+
+      main {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      article {
+        flex: 1;
+        position: relative;
+        background-color: #ddd;
+      }
+
+      aside {
+        position: relative;
+        float: right;
+        width: 160px;
+        height: 150px;
+        padding: 3px 0 0 5px;
+        background-color: white;
+      }
+
+      footer {
+        height: 80px;
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+        bottom: 0;
+        background-color: #ddd;
+      }
+
+      @media screen and (max-width: 600px) {
+        main {
+          flex-direction: column;
+        }
+
+        aside {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Document Heading</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <main>
+      <article>
+        <h2>This is the heading of the main section</h2>
+        <p>This is a paragraph of text.</p>
+      </article>
+      <aside>Here is the aside</aside>
+    </main>
+
+    <footer>
+      <p>Copyright &#169; 2017 <a href="#">My Site</a></p>
+    </footer>
+  </body>
+</html>
