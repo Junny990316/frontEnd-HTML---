@@ -48,7 +48,7 @@
       main {
         position: relative;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* article과 aside를 합치기 위해 wrap 사용 함 */
       }
 
       article {
@@ -77,11 +77,11 @@
 
       @media screen and (max-width: 600px) {
         main {
-          flex-direction: column;
+          flex-direction: column; /* 화면 크기를 줄였을 때 aside를 article 밑에 위치하기 위해 column 사용*/
         }
 
         aside {
-          float: none;
+          float: none; /* right로 설정 되어 있었던 것을 원래대로 되돌려 둠*/
           width: 100%;
         }
       }
