@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   /*
+      submit 관련 함수 구현
+   
+   */
+   function login() {
+      let id = document.getElementById("userid").value;
+      let pw = document.getElementById("passwd").value;
+      let nextPage = false;
+      if(id === "") {
+         alert("아이디값을 입력하시오");
+         return nextPage;
+      } else if (pw === ""){
+         return nextPage;
+      } 
+      return nextPage = true;
+   }
+
+   
+</script>
+</head>
+<body>
+<form action="success.html" onsubmit="return login()">
+ 아이디<input type="text" name="userid" id="userid"><br>
+ 비밀번호<input type="text" name="passwd" id="passwd"><br>
+  <input type="submit" value="로그인" >
+ </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    /*
+       submit 구현
+    
+    */
+    function login() {
+      let id = document.getElementById("userid").value;
+      let pw = document.getElementById("passwd").value;
+      let idMsg = document.getElementById("idSpan");
+      let pwMsg = document.getElementById("pwSpan");
+
+      idMsg.style.display = "none";
+      pwMsg.style.display = "none";
+
+      let idErrorMessage = "아이디값을 입력하세요.";
+      let pwErrorMessage = "비밀번호값을 입력하세요.";
+
+
+      let nextPage = false;
+
+      if(id === "") {
+        idMsg.textContent = idErrorMessage;
+         idMsg.style.display = "block"
+         return nextPage;
+      } else if (pw === ""){
+        pwMsg.textContent = pwErrorMessage;
+        pwMsg.style.display = "block"
+         return nextPage;
+      } 
+      return nextPage = true;
+   }
+
+</script>
+</head>
+<body>
+<form action="success.html" onsubmit="return login()">
+ 아이디<input type="text" name="userid" id="userid">
+ <span id="idSpan"></span><br>
+ 비밀번호<input type="text" name="passwd" id="passwd">
+ <span id="pwSpan"></span><br>
+  <input type="submit" value="로그인" >
+ </form>
+</body>
+</html>

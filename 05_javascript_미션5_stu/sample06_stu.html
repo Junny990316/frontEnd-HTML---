@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        
+      window.onload = function () {
+        let selectImg = document.getElementById("selectImg");
+        let my = document.getElementById("my");
+
+        function changeImg() {
+          let i = selectImg.selectedIndex;
+          my.src = selectImg.options[i].value;
+        }
+
+        changeImg();
+        selectImg.onchange = changeImg;
+      };
+    </script>
+  </head>
+  <body>
+    이미지선택하기<br />
+    <select id="selectImg">
+      <option value="a.jpg">a.jpg</option>
+      <option value="b.jpg">b.jpg</option>
+      <option value="c.jpg">c.jpg</option>
+    </select>
+    <img src="a.jpg" width="100" height="100" id="my" />
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+
+    
+
+    <script type="text/javascript" defer>
+        let textSize = 16;
+        let result = document.getElementById("result");
+        function up() {
+          textSize = 32;
+          updateFontSize();
+        }
+
+        function down() {
+          textSize = 16;
+          updateFontSize();
+        }
+
+        function updateFontSize() {
+          result.style.fontSize = textSize + "px";
+        }
+
+    </script>
+    <button onClick="up()">+</button>
+    <button onClick="down()">-</button>
+    <div id="result">안녕하세요.</div>
+  </body>
+</html>

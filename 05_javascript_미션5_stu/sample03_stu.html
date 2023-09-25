@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  function strLen() {
+    let txt = document.getElementsByTagName('textarea')[0].value.length;
+    document.getElementById("result").textContent = txt;
+  }
+
+
+</script>
+</head>
+<body>
+글자수 세기<br>
+<textarea rows="10" cols="10" oninput="strLen()"></textarea><br>
+입력문자수:<span id="result"></span>
+</body>
+</html>

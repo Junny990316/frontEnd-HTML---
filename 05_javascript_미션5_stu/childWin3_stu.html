@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+   /*
+
+         함수 구현
+   */
+
+   function addr(val) {
+    let row = val.parentNode.parentNode;
+
+    let postcode = row.cells[0].textContent;
+    let address = row.cells[1].textContent;
+
+    window.opener.document.querySelector("#post").value = postcode;
+    window.opener.document.querySelector("#address").value = address;
+
+    window.close();
+ }
+
+</script>
+</head>
+<body>
+  <table border="1">
+     <tr>
+      <th>우편번호</th>
+      <th>주소</th>
+    </tr>
+    <tr>
+      <td><a href="#" onclick="addr(this);">12345</a></td>
+      <td>서울시 강남구 XXX 아파트</td>
+    </tr>
+    <tr>
+      <td><a href="#"onclick="addr(this);">99999</a></td>
+      <td>경기도 고양시 ZZZ 아파트</td>
+    </tr>
+  </table>
+ </body>
+</html>

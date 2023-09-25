@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+	   //구현
+     $('input[type="text"]').keyup(function() {
+      
+      let val = (this).val();
+      let cnt = val.length;
+
+      $('#result').text(cnt);
+        });
+
+      $('#x').on('click', function() {
+        let charCnt = $('input[type="text"]').val().length;
+        $('#result').text(charCnt)
+      });
+
+  });
+</script>
+</head>
+<body>
+값:<input type="text"><button id="x">글자수 얻기</button><br>
+글자수:<span id="result"></span>
+
+</body>
+</html>

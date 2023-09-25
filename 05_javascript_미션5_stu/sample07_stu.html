@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+     
+      // 구현
+      function cal(val) {
+        let sum = 0;
+
+        for (let i = 0; i <= val; i++) {
+          sum += i;
+        }
+        document.getElementById("result").textContent = sum;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="cal(5)">5</button>
+    <button onclick="cal(10)">10</button>
+    <button onclick="cal(15)">15</button><br />
+    총합:<span id="result"></span>
+  </body>
+</html>

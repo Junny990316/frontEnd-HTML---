@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   /*
+       구현
+   */
+    function count(cal) {
+        const resultElement = document.getElementById("quantity");
+        let num = parseInt(resultElement.value);
+
+        if(cal === 'plus') {
+            num++;
+        } else if (cal === 'minus') {
+            num--;
+        }
+        resultElement.value = num;
+    }
+
+</script>
+</head>
+<body>
+갯수<input type="text" name="quantity"  id="quantity" value="1">
+<button onclick="count('plus')" id="up">+</button><button onclick="count('minus')" id="down">-</button>
+</body>
+</html>
