@@ -7,9 +7,9 @@
 <script type="text/javascript">
 
    $(document).ready(function() {
-       
-   	  //구현
-   	   
+       $('#all').on("change", function() {
+		$('.lang').prop('checked', $(this).prop('checked'));
+	   })
    	});
 </script>
 </head>

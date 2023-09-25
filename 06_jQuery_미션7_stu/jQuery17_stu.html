@@ -11,7 +11,15 @@
    $(document).ready(function() {
 	   
 	   var childWin;
-		//구현
+		$("#one").on('click', function() {
+			childWin = window.open("childWin.html", "childForm", "width=300,height=300");
+		});
+		$("#two").on("click", function() {
+			childWin.close();
+		})
+		$("#three").on("click", function() {
+			window.close();
+		})
 	});
 </script>
 </head>

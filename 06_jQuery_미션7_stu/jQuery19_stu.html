@@ -9,7 +9,14 @@
 
    $(document).ready(function() {
 		 var childWin;
-			//구현
+		$("button").on("click", function() {
+			window.open("childWin3.html", "childForm", "width=400,height=200");
+		})
+		$("input").on("change", function() {
+			$("#post").val();
+			$("#address").val();
+			$("#address1").val();
+		})
    });
 
 </script>

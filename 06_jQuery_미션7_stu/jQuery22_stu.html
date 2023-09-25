@@ -9,6 +9,26 @@
 
    $(document).ready(function() {
 		//구현
+      $("#one").on("click", function() {
+         let v1 = parseInt($("#v1").val());
+         let v2 = parseInt($("#v2").val());
+         let result = v1 + v2
+         $("#result").val(result);
+      })
+
+      $("#quantity").on("change", function() {
+         let price = parseInt($("#price").val());
+         let quantity = parseInt($("#quantity").val());
+         $("#total").text(price * quantity);
+      })
+
+      $("#two").on("click", function() {
+         let total = 0;
+         $(".fruit:checked").each(function() {
+            total += parseInt($(this).val());
+         });
+         $("#totalPrice").text(total);
+      })
 		
  });
 </script>
@@ -18,6 +38,7 @@
 <input type="text" name="v1" id="v1" value="10">+
 <input type="text" name="v2" id="v2" value="20">=
 <input type="text" name="result" id="result" value=""><button id="one">연산</button><br>
+
 <h3>2. 총합 구하기</h3>
 가격<input type="text" name="price" id="price" value="2500"> X
 수량<select id="quantity">
@@ -28,6 +49,7 @@
      <option>5</option>
    </select>
 총합:<span id="total"></span>
+
 <h3>3. 총합 구하기2 ( 선택된 값만 )</h3>
 <div>
 바나나(1000원)<input type="checkbox" name="fruit" class="fruit" value="1000"><br>

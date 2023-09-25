@@ -8,7 +8,24 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-		//구현
+		$("form").on("submit", function() {
+			event.preventDefault();
+
+			userId = $("#userid").val();
+			password = $("#passwd").val();
+
+			$("#idSpan").text("");
+			$("#pwSpan").text("");
+
+			if(userId === "") {
+				$("#idSpan").text('아이디값을 입력하시오');
+			} else if (password === "") {
+				$("#pwSpan").text("비밀번호값을 입력하시오");
+			} else {
+				let action = $(this).attr("action");
+            	window.location.href = action;
+			}
+		})
 	});
 </script>
 </head>

@@ -9,6 +9,12 @@
 
  function post(postNum,addr){
 	   //구현
+    window.opener.document.querySelector("#post").value = postNum;
+    window.opener.document.querySelector("#address").value = addr;
+     
+    // 현재 창 닫기
+    window.close();
+
  }
 
 </script>

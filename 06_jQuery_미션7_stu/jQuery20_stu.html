@@ -11,7 +11,12 @@
 
    var arr = [];  
    $(document).ready(function() {
-		//구현
+		$("button").on("click", function() {
+         let val = $("#v1").val();
+         arr.push(val);
+
+         $("#result").html(arr.join("<br>"))
+      }) 
    });
    
 </script>

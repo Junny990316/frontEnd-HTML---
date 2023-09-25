@@ -9,7 +9,23 @@
 
     
     $(document).ready(function() {
-		 //구현
+		 $('form').on("submit", function(event) {
+			event.preventDefault();
+
+			let userId = $("#userid").val();
+			let password = $("#passwd").val();
+
+			if(userId === "") {
+				alert("아이디값을 입력하시오");
+				return false;
+			} else if (password === "") {
+				alert("비밀번호값을 입력하시오");
+				return false;
+			} else {
+				let action = $(this).attr("action");
+            	window.location.href = action;
+			}
+		 })
 	});
 </script>
 </head>

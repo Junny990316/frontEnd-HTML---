@@ -7,8 +7,14 @@
 <script type="text/javascript">
 
    $(document).ready(function() {
-     
-	   //구현
+     $("button").on("click", function() {
+		let selectedHobby = [];
+		$("input[name='hobby']:checked").each(function() {
+			selectedHobby.push($(this).val());
+		});
+
+		$('#result').text(selectedHobby.join(" "))
+	 })
 	   
 	});
 

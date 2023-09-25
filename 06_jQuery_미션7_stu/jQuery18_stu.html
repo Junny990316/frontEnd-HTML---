@@ -9,7 +9,10 @@
 	
     $(document).ready(function() {
 		 var childWin;
-			//구현
+		$("button").on("click", function() {
+			window.name = "parentForm";
+		childWin=window.open("childWin2.html","childForm","width=300,height=300");
+		})
 	});
 </script>
 </head>
